@@ -20,8 +20,19 @@ namespace DemoProject.Controllers
         {
             var questions = new List<Question>
             {
-                new Question { Id = 1, QuestionText = "What is a scoped service?", Answer = "A service that can be used per request." },
-                new Question { Id = 2, QuestionText = "What does MVC stand for?", Answer = "Model View Controller" }
+                //Added hint to Question object #1
+                new Question { 
+                    Id = 1, 
+                    QuestionText = "What is a scoped service?", 
+                    Answer = "A service that can be used per request.", 
+                    Hint = "Defines the lifetime of a service. The scope is created and dies with the request." },
+
+                //Added hint to Question object #2
+                new Question { 
+                    Id = 2, 
+                    QuestionText = "What does MVC stand for?", 
+                    Answer = "Model View Controller" , 
+                    Hint = "M - Handles data and business logic, the user doesn't see this.\nV - What the user sees on the page\nReceives input and directs the flow of data"}
             };
             return Ok(questions);
         }
