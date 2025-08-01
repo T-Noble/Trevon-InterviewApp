@@ -19,6 +19,11 @@ html {
 
 body {
   margin-bottom: 60px;
+
+}
+
+main {
+    justify-items: center;
 }
 
 .custom-vstack {
@@ -29,4 +34,16 @@ body {
 .custom-hstack {
     display: flex;
     flex-flow: row nowrap;
+    margin-bottom: 10px;
+    /*justify-content: space-between;*/
+}
+
+.btnAnswer {
+    /*color: darkslategrey;*/
+    /*all: unset;
+    cursor: pointer;*/
+}
+
+#answerBtn {
+    margin-right: 10px;
 }

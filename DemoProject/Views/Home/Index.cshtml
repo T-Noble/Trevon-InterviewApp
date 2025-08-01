@@ -6,10 +6,17 @@
     <h1 class="display-4">Questions</h1>
     <div class="custom-vstack" data-bind="foreach: questions">
         <div class="custom-hstack">
-            <span data-bind="text: Text"></span>
+            <span data-bind="text: Text, title: Hint" style="width: 200px;"></span>
+            <button id="answerBtn">Show Answers</button>
+
+            <div class="btnAnswer">
+                <!--Adding span for answer text-->
+                <span class="answer" data-bind="text: Answer"></span>
+            </div>
+            
         </div>
     </div>
-    
+
 </div>
 
 @section pagescripts {
