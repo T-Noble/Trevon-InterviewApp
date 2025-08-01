@@ -8,7 +8,7 @@
     <hr />
     <div class="custom-vstack" data-bind="foreach: questions">
         <div class="custom-hstack">
-            <span data-bind="text: Text, title: Hint" style="width: 200px;"></span>
+            <span data-bind="attr: { title: Hint },text: Text" style="width: 200px;"></span>
             <button class="btn" id="showAnswerBtn"
                     data-bind="click: toggleAnswer, text: buttonText">
                 Show Answer
