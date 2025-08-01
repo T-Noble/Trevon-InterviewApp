@@ -4,19 +4,26 @@
 
 <div class="text-center">
     <h1 class="display-4">Questions</h1>
+    <h4 class="display-6">An Interview App by Trevon Noble</h4>
+    <hr />
     <div class="custom-vstack" data-bind="foreach: questions">
         <div class="custom-hstack">
             <span data-bind="text: Text, title: Hint" style="width: 200px;"></span>
-            <button id="answerBtn">Show Answers</button>
+            <button class="btn" id="showAnswerBtn"
+                    data-bind="click: toggleAnswer, text: buttonText">
+                Show Answer
+            </button>
 
             <div class="btnAnswer">
                 <!--Adding span for answer text-->
-                <span class="answer" data-bind="text: Answer"></span>
+                <span class="answer" data-bind="text: Answer, visible: showAnswer"></span>
             </div>
             
         </div>
+        <hr />
     </div>
 
+    <p class="kudos" >A big thankyou to Dane Barongan for initially reaching out!</p>
 </div>
 
 @section pagescripts {

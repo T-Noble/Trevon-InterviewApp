@@ -23,9 +23,23 @@ function QuestionModel(data) {
     this.Text = ko.observable(data.QuestionText);
     this.Answer = ko.observable(data.Answer);
     this.showAnswer = ko.observable(false);
+    this.btnColor = ko.observable("white");
+    this.buttonText = ko.observable("Show Answer");
 
     //Adding an observable for hint
     this.Hint = ko.observable(data.Hint);
 
-    this.toggleAnswer = () => this.showAnswer(!this.showAnswer());
+    //Use this function to show the data on button click
+    //Extend function to change answer of the button
+    this.toggleAnswer = () => {
+        var changeText = !this.showAnswer();
+        this.showAnswer(changeText);
+        this.buttonText(changeText ? "Hide Answer" : "Show Answer");
+        //this.buttonText(change ? "Hide Answer" : "Show Answer");
+    };
+
+    this.ColorTheButton = () => this.btnColor("gray");
+
+    //Original
+    //this.toggleAnswer = () => this.showAnswer(!this.showAnswer());
 }
