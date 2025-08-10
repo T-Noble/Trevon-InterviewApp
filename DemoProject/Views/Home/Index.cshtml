@@ -1,31 +1,59 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "TrevonN";
+    ViewData["Content"] = "PreInterview";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Questions</h1>
-    <h4 class="display-6">An Interview App by Trevon Noble</h4>
-    <hr />
-    <div class="custom-vstack" data-bind="foreach: questions">
-        <div class="custom-hstack">
-            <span data-bind="attr: { title: Hint },text: Text" style="width: 200px;"></span>
-            <button class="btn" id="showAnswerBtn"
-                    data-bind="click: toggleAnswer, text: buttonText">
-                Show Answer
-            </button>
-
-            <div class="btnAnswer">
-                <!--Adding span for answer text-->
-                <span class="answer" data-bind="text: Answer, visible: showAnswer"></span>
-            </div>
-            
-        </div>
-        <hr />
+    <!-- Title -->
+    <div class="pageTitle text-center">
+        @Html.Partial("_HeaderH1andH4")
     </div>
 
-    <p class="kudos" >A big thankyou to Dane Barongan for initially reaching out!</p>
-</div>
+    <!-- Main content -->
+    <div id="scrollBox" class="scrollContainer">
+        @* Scroll 1 *@
+        <div class="scrollableContent custom-vstack" data-bind="foreach: questions">
+            <div class="custom-hstack">
+                <span data-bind="attr: { title: Hint },text: Text" style="width: 200px;"></span>
+                <button class="btn" id="showAnswerBtn" data-bind="click: toggleAnswer, text: buttonText">
+                    Show Answer
+                </button>
+                <div class="btnAnswer">
+                    <!--Adding span for answer text-->
+                    <span class="answer" data-bind="text: Answer, visible: showAnswer"></span>
+                </div>
+            </div>
+            <hr />
+        </div>
 
+        @* Scroll 2 *@
+        <div class="scrollableContent">
+            <p>This is my content # 2</p>
+        </div>
+        @* Scroll 3 *@
+        <div class="scrollableContent">
+            <p>This is my content # 3</p>
+        </div>
+        @* Scroll 4 *@
+        <div class="scrollableContent">
+            <p>This is my content # 4</p>
+        </div>
+        @* Scroll 5 *@
+        <div class="scrollableContent">
+            <p>This is my content # 5</p>
+        </div>
+    </div>
+
+
+    <div>
+        <button id="prevBtn" type="button">Previous</button>
+        <button id="nextBtn" type="button">Next</button>
+    </div>
+
+    <!-- Thank you to Dane -->
+    <p class="kudos">A big thankyou to Dane Barongan for initially reaching out!</p>
+</div>
 @section pagescripts {
     <script src="~/js/viewModels/question.js"></script>
+    <script src="~/js/contentScroll.js"></script>"
 }

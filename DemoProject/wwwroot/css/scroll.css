@@ -1,0 +1,15 @@
+.scrollContainer {
+    display: flex;
+    max-width: 43rem;
+    overflow-x: hidden; 
+}
+
+.scrollContainer::-webkit-scrollbar {
+    height: 8px;
+}
+.scrollableContent {
+    min-width: 100%;
+    flex-shrink: 0; /* Prevent shrinking */
+    text-align: center;
+}
+button:disabled { opacity:.5; cursor:not-allowed; }
