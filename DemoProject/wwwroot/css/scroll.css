@@ -13,3 +13,19 @@
     text-align: center;
 }
 button:disabled { opacity:.5; cursor:not-allowed; }
+
+#prevBtn {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+#prevBtn:hover {
+    background-color: dimgray;
+}
+
+#nextBtn {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+#nextBtn:hover {
+    background-color: dimgray;
+}
