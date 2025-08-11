@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   let contentTitle = [
     { title: "PreAssessment", description: "An Interview App by Trevon Noble" },
-    { title: "Interview Question 1", description: "Given a string, save the string into a new variable but reversed" },
+    { title: "Interview Question 1", description: "Given a string, return string in reverse" },
     { title: "Interview Question 2", description: "Given an int list, return the list as strings" },
     { title: "Interview Question 3", description: "Given an object list with properties USMC or NAVY, return only USMC objects" },
-    { title: "Post Interview Gameplan", description: "A plan to further prepare for this role" }
+    { title: "Interview Question 4", description: "Difference between == and ===" },
+    { title: "Post Interview Gameplan", description: "Self-audit" }
   ]
 
   //Update buttons every time

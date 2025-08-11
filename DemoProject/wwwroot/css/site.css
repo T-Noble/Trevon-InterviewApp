@@ -31,8 +31,8 @@ main {
 }
 
 .custom-hstack {
-    display: flex;
-    flex-flow: row nowrap;
+    /* display: flex;
+    flex-flow: row nowrap; */
     margin-bottom: 1px;
     place-items: center;
 }
@@ -70,3 +70,27 @@ main {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+#quesOne {
+    text-align: left;
+    padding: .75rem;
+    place-self: center;
+}
+#quesOne input {
+    width: 20rem;
+}
+
+#quesTwo, #quesTwo pre, #quesTwo code {
+  text-align: left !important;
+}
+
+#quesThree {
+    text-align: left;
+}
+
+#quesFour {
+    text-align: left;
+}
+
+#gamePlan {
+    text-align: left;
+}

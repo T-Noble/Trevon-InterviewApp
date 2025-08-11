@@ -1,12 +1,5 @@
 ﻿@{
     ViewData["Title"] = "TrevonN";
-    ViewData["Content"] = "PreAsessment";
-    ViewData["Description"] = "An Interview App by Trevon Noble";
-    //Question1 - PreAssessment
-    //Question2 - Interview Question 1
-    //Question3 - Interview Question 2
-    //Question4 - Interview Question 3
-    //Question5 - Post Interview Gameplan
 }
 
 <div class="text-center">
@@ -34,22 +27,94 @@
 
         @* Scroll 2 *@
         <div class="scrollableContent">
-            <p>This is my content # 2</p>
+            <div id="quesOne">
+                <form action="#" onsubmit="return false;">
+                    <div>
+                        <label for="stringInput">Enter string:</label>
+                        <br>
+                        <input id="stringInput" type="text" name="stringInput" maxlength="50" placeholder="50 char max">
+                    </div>
+                    <br>
+                    <div>
+                        <span><strong id="stringOutPut"></strong></span>
+                    </div>
+                </form>
+            </div>
         </div>
+
         @* Scroll 3 *@
         <div class="scrollableContent">
-            <p>This is my content # 3</p>
+            <div id="quesTwo">
+                <h4>My Solution:</h4>
+                <p>
+                    // Create variables and initialize <br>
+                    List@("<int>") numbers = new List@("<int>") { 1, 2, 3, 4, 5 }; <br>
+                    var result = new StringBuilder( ); <br><br>
+                    for (int i = 0; i @("< numbers.Count; i++;) { ") <br>
+                    &emsp; if ( i > 0 ) result.Append( ',' );<br>
+                    &emsp; result.Append( numbers[ i ].ToString( ) ); <br>
+                    }
+                </p>
+            </div>
         </div>
+
         @* Scroll 4 *@
         <div class="scrollableContent">
-            <p>This is my content # 4</p>
+            <div id="quesThree">
+                <h4>My Solution:</h4>
+                <p>
+                    // Use foreach to iterate through all items <br>
+                    // Create variable to hold result items<br>
+                    var resultList; <br>
+
+                    foreach (var item in list) { <br>
+                    &emsp; if ( item.nameProperty.toUpper( ) == "NAVY") <br>
+                    &emsp; &emsp; continue; <br>
+                    &emsp; else <br>
+                    &emsp; &emsp; resultList.Add(item) <br>
+                    }
+                </p>
+            </div>
         </div>
+
         @* Scroll 5 *@
         <div class="scrollableContent">
-            <p>This is my content # 5</p>
+            <div id="quesFour">
+                <h4>My Solution:</h4>
+                <p>
+                    In JavaScript the difference between == and === is <br><br>
+                    == is loose equality so JS will convert the values then compare<br>
+                    &emsp;<b>Ex:</b> '10' == 10 would be <b>TRUE</b><br>
+                    <br>
+                    === is strict equality. No conversion, the data type & value must match<br>
+                    &emsp;<b>Ex:</b> '10' === 10 would be <b>FALSE</b>
+                    <br>
+                </p>
+            </div>
         </div>
-    </div>
 
+        @* Scroll 6 *@
+        <div class="scrollableContent">
+            <div id="gamePlan">
+                Based on our interview I've mainly taken away that:
+                <ul>
+                    <li>you all are a close-knit family who develop fast and frequently</li>
+                    <li>work is done in 2 week sprints</li>
+                    <li>NO daily stand-up (hallelujah)</li>
+                    <li>the focus of development efforts are SAAS applications</li>
+                </ul>
+                Going forward until I hear back from Apex, my efforts will be focused on:
+                <ul>
+                    <li>Telerik and Kendo UI</li>
+                    <li>Strengthening my knowledge of the MVC architecture</li>
+                    <li>Building comfort and confidence in building apps fast while ensuring security and efficiency</li>
+                </ul>
+
+                <p>Thank you for the experience, I look forward to developing with you all!</p>
+            </div>
+        </div>
+
+    </div>
 
     <div>
         <button id="prevBtn" type="button">Previous</button>
@@ -61,5 +126,5 @@
 </div>
 @section pagescripts {
     <script src="~/js/viewModels/question.js"></script>
-    <script src="~/js/contentScroll.js"></script>"
+    <script src="~/js/contentScroll.js"></script>
 }

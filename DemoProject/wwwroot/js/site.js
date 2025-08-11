@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿/// Interview Questions Functionality
+document.addEventListener('DOMContentLoaded', () => {
 
-// Write your JavaScript code.
+    // Interview Question 1 
+    function intQues_One() {
+        $('#stringInput').on('input', function () {
+        const reversed = [...this.value].reverse().join('');
+        $('#stringOutPut').text(reversed);
+    }).trigger('input');
+    }
+
+    intQues_One();
+});
+
+
+
+
